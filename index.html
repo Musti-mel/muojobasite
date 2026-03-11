@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUOJOBA</title>
+<title>MUOJOBA — Digital Workshop</title>
 <link rel="stylesheet" href="main.css">
 <link rel="favicon" href="favicon.ico" type="favicon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,11 +84,60 @@
     </p>
 
     <div class="hero-status">
-      <div class="h-stat"></div>
+      <div class="h-stat"><div class="h-stat-n">3</div><div class="h-stat-l">Portals</div></div>
       <div class="h-div"></div>
-      <div class="h-stat"></div>
+      <div class="h-stat"><div class="h-stat-n">∞</div><div class="h-stat-l">Experiments</div></div>
       <div class="h-div"></div>
-      <div class="h-stat"></div>
+      <div class="h-stat"><div class="h-stat-n" id="uptime">0d</div><div class="h-stat-l">Uptime</div></div>
+      <div class="h-div"></div>
+      <div class="h-stat"><div class="h-stat-n" style="color:var(--ion)">●</div><div class="h-stat-l">Active</div></div>
+    </div>
+
+    <!-- Orbit visual -->
+    <div class="hero-orbit">
+      <svg id="orbit-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" width="420" height="420">
+        <!-- Outer ring -->
+        <circle cx="210" cy="210" r="180" stroke="rgba(205,214,244,.06)" stroke-width="1"/>
+        <!-- Mid ring -->
+        <circle cx="210" cy="210" r="120" stroke="rgba(166,227,161,.08)" stroke-width="1" stroke-dasharray="4 6"/>
+        <!-- Inner ring -->
+        <circle cx="210" cy="210" r="60" stroke="rgba(137,220,235,.1)" stroke-width="1"/>
+
+        <!-- Orbiting group 1 (slow) -->
+        <g id="orb1" style="transform-origin:210px 210px">
+          <circle cx="390" cy="210" r="5" fill="var(--ion)" opacity=".7"/>
+          <circle cx="390" cy="210" r="10" fill="var(--ion)" opacity=".1"/>
+        </g>
+
+        <!-- Orbiting group 2 (medium) -->
+        <g id="orb2" style="transform-origin:210px 210px">
+          <rect x="323" y="204" width="12" height="12" fill="var(--plasma)" opacity=".6" transform="rotate(45 329 210)"/>
+        </g>
+
+        <!-- Orbiting group 3 (fast, inner) -->
+        <g id="orb3" style="transform-origin:210px 210px">
+          <circle cx="270" cy="210" r="4" fill="var(--sol)" opacity=".7"/>
+        </g>
+
+        <!-- Center -->
+        <circle cx="210" cy="210" r="18" fill="none" stroke="rgba(166,227,161,.2)" stroke-width="1"/>
+        <circle cx="210" cy="210" r="6" fill="var(--ion)" opacity=".6"/>
+        <circle cx="210" cy="210" r="3" fill="var(--ion)"/>
+
+        <!-- Cross hairs -->
+        <line x1="210" y1="180" x2="210" y2="196" stroke="rgba(205,214,244,.2)" stroke-width="1"/>
+        <line x1="210" y1="224" x2="210" y2="240" stroke="rgba(205,214,244,.2)" stroke-width="1"/>
+        <line x1="180" y1="210" x2="196" y2="210" stroke="rgba(205,214,244,.2)" stroke-width="1"/>
+        <line x1="224" y1="210" x2="240" y2="210" stroke="rgba(205,214,244,.2)" stroke-width="1"/>
+
+        <!-- Pixel art decorations around ring -->
+        <rect x="202" y="26" width="16" height="16" fill="rgba(166,227,161,.15)"/>
+        <rect x="206" y="30" width="8" height="8" fill="rgba(166,227,161,.4)"/>
+        <rect x="378" y="26" width="16" height="16" fill="rgba(137,220,235,.15)"/>
+        <rect x="382" y="30" width="8" height="8" fill="rgba(137,220,235,.4)"/>
+        <rect x="202" y="378" width="16" height="16" fill="rgba(249,226,175,.15)"/>
+        <rect x="206" y="382" width="8" height="8" fill="rgba(249,226,175,.4)"/>
+      </svg>
     </div>
   </section>
 
